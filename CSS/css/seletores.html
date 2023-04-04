@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* (*) utilizado para aplicar a formatação em todo o corpo da página*/
+        /* (aninhado > div) estilizar os elementos dentro da tag filha de div */
+        /* (aninhado section) estilza elementos descendentes da div que contém o id aninhado */
+        /* (p + ul) estiliza elementos dentro de tags adjacentes à tag 'p'. */
+        /* (p ~ ol) estiliza elementos dentro das tags irmãos, sendo que 'p' e 'ol' são tags filhas de um mesmo pai (div) */
+        /* (span:nth-child(1)) seleciona span que é primeiro filho de uma tag. */
+        /* (section > :nth-child(odd)) seleciona as tags ímpares de uma família de tags.*/
+        /* (section > :nth-child(odd), ul) seleciona as tags ímpares de uma família de tags e também aos elementos da tag ul. */
+        /* (section > span:nth-of-type(2)) dentro da tag section, estiliza o segundo span que está nessa seção. */
+
+       section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        .prefer {color: #f77;}
+        
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio-empresa'>
+                <li class="prefer">Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
