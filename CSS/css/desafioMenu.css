@@ -1,0 +1,98 @@
+         .body {
+            width: 960px;
+            background-color: lightslategray;
+        }
+
+        .cabecalho {
+            background-color: #000;
+            border-bottom:  solid skyblue 5px;
+            height: 70px;
+            clear: both;
+        }
+
+        .logo img {
+            
+            width: 250px;
+            height: 50px;
+            left: 0px;
+            padding: 10px;     
+        }
+
+        .menu {
+            list-style: none;
+            position: absolute;
+            left: 250px;
+            top: 0px;
+        }
+
+        .menu li {
+            display: inline-block;
+            padding: 15px;
+        }
+
+       .menu li a {    
+            text-decoration: none;
+            font-family: 'Oswald';
+            color: #fff;
+            
+        }
+
+        .menu li a:hover {
+            background: blue;
+            border: solid 2px;
+            border-radius: 5px;
+            padding: 5px 5px;
+        }
+
+        .autenticacao {
+            position: absolute;
+            right: 50px;
+            top: 30px;
+        }
+
+        .autenticacao a{
+            text-decoration: none;
+            font-family: 'Oswald';
+            color: #fff;
+            padding: 5px;
+            font-size: 20px;
+        }
+        
+        .destaque {
+            border: solid red 2px;
+            background: red;
+            border-radius: 20px;
+            box-shadow: 2px 2px 1px 1px #000;
+
+        }
+
+        .destaque:hover {
+            background: yellow;
+            color: red;
+            box-shadow: 2px 2px 1px 1px #000;
+
+        }
+
+        .destaque:active {
+            box-shadow: none;
+
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            background: slategrey;
+            border: solid slategrey 5px;
+            border-radius: 5px;
+            
+        }
+
+        @media (max-width: 850px) and (min-width: 300px) {
+            .autenticacao {display: none;}
+        }
+        @media (max-width: 500px) {
+            .menu-toggle {display: block;}
+            .menu {display: none;}
+        }
